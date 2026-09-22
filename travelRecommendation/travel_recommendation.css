@@ -1,0 +1,9 @@
+navBar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #3c5a7c;
+    margin: -8px;
+}
