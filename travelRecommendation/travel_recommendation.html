@@ -6,13 +6,124 @@
         <link rel="stylesheet" href="travel_recommendation.css">
     </head>
     <body>
-        <navBar>
-            <a id="home" href="#home">Home</a>
-            <a id="aboutUs" href="#aboutUs">About Us</a>
-            <a id="contactUs" href="#contactUs">Contact Us</a>
-            <input type="text" id="searchBar" placeholder="Search...">
-            <button id="searchButton">Search</button>
-            <button id="clearButton">Clear</button>
-        </navBar>
+        <nav class="navBar">
+            <a class="logo" href="#home">
+                <span>✈</span>
+                <span>TravelBloom</span>
+            </a>
+
+            <div class="navLinks">
+                <a href="#home">Home</a>
+                <a href="#aboutUs">About Us</a>
+                <a href="#contactUs">Contact Us</a>
+            </div>
+
+            <div class="searchBox">
+                <input type="text" id="searchBar" placeholder="Enter a destination or keyword">
+                
+            <span>🔍</span>
+            <button type="button" id="searchButton">Search</button>
+            <button type="button" id="clearButton">Clear</button>
+            </div>
+        </nav>
+        <main id="home" class="hero">
+            <aside class="socialLinks">
+                <span class="socialLine"></span>
+                <a href="https://twitter.com/">𝕏</a>
+                <a href="https://facebook.com/">f</a>
+                <a href="https://instagram.com/">◎</a>
+                <a href="https://youtube.com/">▶</a>
+            </aside>
+            <section class="heroContent">
+                <h1 id="heroTitle">
+                    EXPLORE DREAM<br>
+                    DESTINATION
+                </h1>
+                <p>
+                    Discover incredible destinations around the world.
+                    Explore vibrant cities, peaceful beaches, and amazing
+                    cultural landmarks. Find inspiration for your next
+                    adventure and make your dream trip a reality.
+                </p>
+
+                <button type="button" class="bookButton">Book Now</button>
+            </section>
+        </main>
+        <section id="aboutUs" class="aboutSection">
+            <h2>ABOUT US</h2>
+            
+            <div class="aboutDescription">
+                <p>
+                    Welcome to TravelBloom! We are a team of passionate
+                    individuals dedicated to helping you discover amazing
+                    destinations around the world.
+                </p>
+                <p>
+                    Our values include integrity, innovation, customer
+                    satisfaction, and teamwork. We put our customers first
+                    and work together to make every journey memorable.
+                </p>
+                <p>
+                    Explore our website to learn more about what we offer!
+                </p>
+            </div>
+            <div class="team">
+                <h3>Our<br>Team</h3>
+
+                <article class="teamCard">
+                    <span class="teamIcon">👤</span>
+                    <h4>Fernando Rondon</h4>
+                    <p>Fernando leads our team and shapes our strategy and vision.</p>
+                    <span class="teamRole">CEO</span>
+                </article>
+                <article class="teamCard">
+                    <span class="teamIcon">👤</span>
+                    <h4>Valeria Rondon</h4>
+                    <p>Valeria coordinates the team and keeps our projects on track.</p>
+                    <span class="teamRole">Team Lead</span>
+                </article>
+                <article class="teamCard">
+                    <span class="teamIcon">👤</span>
+                    <h4>Percy Rondon</h4>
+                    <p>Percy manages project delivery and builds client relationships.</p>
+                    <span class="teamRole">Delivery Head</span>
+                </article>
+            </div>
+        </section>
+        <section id="contactUs" class="contactSection">
+            <div class="contactHeading">
+                <h2>CONTACT US</h2>
+                <p>Get in touch</p>
+            </div>
+
+            <form class="contactForm">
+                <label for="contactName">Name</label>
+                <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Enter your name"
+                    required>
+
+                <label for="contactEmail">Email</label>
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="Enter your email"
+                    required>
+
+                <label for="contactMessage">Message</label>
+                <textarea
+                    id="contactMessage"
+                    name="message"
+                    placeholder="Enter your message"
+                    rows="7"
+                    required></textarea>
+
+                <button type="submit">Submit</button>
+                <p id="contactStatus" role="status"></p>
+            </form>
+        </section>
     </body>
 </html>

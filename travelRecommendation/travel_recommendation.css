@@ -1,9 +1,391 @@
-navBar
-{
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navBar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #3c5a7c;
-    margin: -8px;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 12px 30px;
+    background-color: #122f39;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.logo > span:first-child {
+    font-size: 32px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 24px;
+}
+
+.navLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.navLinks a:hover {
+    text-decoration: underline;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px;
+    background-color: white;
+    border-radius: 30px;
+}
+
+.searchBox input {
+    width: 230px;
+    min-width: 0;
+    padding: 8px 12px;
+    border: none;
+    background: transparent;
+    font-size: 12px;
+}
+
+.searchBox input:focus-visible {
+    outline: 2px solid #128580;
+    border-radius: 20px;
+}
+
+.searchBox button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #128580;
+    color: white;
+    cursor: pointer;
+}
+
+.searchBox button:hover {
+    background-color: #0d6763;
+}
+
+/* Distribuye la altura entre la navegación y el contenido. */
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-height: 550px;
+    padding: 70px 8% 70px 100px;
+    color: white;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 25, 35, 0.6),
+            rgba(0, 25, 35, 0.1)
+        ),
+        url("./images/new-york.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.heroContent {
+    max-width: 580px;
+}
+
+.heroContent h1 {
+    margin: 0 0 24px;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.heroContent p {
+    max-width: 420px;
+    margin: 0 0 28px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bookButton {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: #128580;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookButton:hover {
+    background-color: #0d6763;
+}
+
+/* Iconos junto al borde izquierdo. */
+.socialLinks {
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.socialLine {
+    width: 2px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.socialLinks a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.socialLinks a:hover {
+    color: #70ded5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.aboutSection {
+    min-height: 100vh;
+    padding: 60px 7%;
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 25, 35, 0.45),
+            rgba(0, 25, 35, 0.65)
+        ),
+        url("./images/new-york.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.aboutSection h2 {
+    margin: 0 0 28px;
+    font-size: clamp(36px, 5vw, 64px);
+}
+
+.aboutDescription {
+    padding: 20px 24px;
+    border-radius: 6px;
+    background-color: rgba(10, 30, 40, 0.65);
+}
+
+.aboutDescription p {
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.aboutDescription p:last-child {
+    margin-bottom: 0;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: 180px repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.team h3 {
+    margin: 16px 0;
+    font-size: 44px;
+    line-height: 1.1;
+}
+
+.teamCard {
+    height: 100%;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: rgba(10, 30, 40, 0.75);
+    text-align: center;
+}
+
+.teamIcon {
+    font-size: 30px;
+}
+
+.teamCard h4 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.teamCard p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.teamRole {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 5px;
+    background-color: #245779;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* La barra permanece visible al navegar entre secciones. */
+.navBar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    min-height: 62px;
+}
+
+/* Home ocupa el espacio restante de la pantalla. */
+.hero {
+    flex: none;
+    min-height: calc(100vh - 62px);
+    min-height: calc(100svh - 62px);
+}
+
+/* Evita que la barra tape el inicio de cada sección. */
+#home,
+#aboutUs {
+    scroll-margin-top: 62px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contactSection {
+    min-height: calc(100svh - 62px);
+    scroll-margin-top: 62px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 7%;
+    color: white;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 25, 35, 0.35),
+            rgba(0, 25, 35, 0.6)
+        ),
+        url("./images/new-york.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.contactHeading h2 {
+    margin: 0 0 20px;
+    font-size: clamp(36px, 5vw, 64px);
+}
+
+.contactHeading p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 550px;
+    justify-self: end;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: rgba(10, 30, 40, 0.65);
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+    color: white;
+    font: inherit;
+}
+
+.contactForm textarea {
+    resize: vertical;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+    color: #ddd;
+}
+
+.contactForm input:focus-visible,
+.contactForm textarea:focus-visible {
+    outline: 2px solid #70ded5;
+    outline-offset: 2px;
+}
+
+.contactForm button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #128580;
+    color: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+.contactForm button:hover {
+    background-color: #0d6763;
+}
+
+#contactStatus {
+    margin: 0;
+}
+
+#contactStatus:empty {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .contactSection {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 24px;
+        scroll-margin-top: 0;
+    }
+
+    .contactForm {
+        max-width: none;
+    }
 }
