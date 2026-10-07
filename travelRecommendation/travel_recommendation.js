@@ -87,8 +87,12 @@ function showTravelRecommendation()
 
 }
 
+const clearButton = document.getElementById("clearButton");
+
 function clearSearch()
 {
-    
+    result.innerHTML = "";
 }
+
+clearButton.addEventListener("click", clearSearch);
 
