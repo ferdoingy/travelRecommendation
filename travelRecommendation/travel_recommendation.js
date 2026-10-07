@@ -5,3 +5,5 @@ function showTravelRecommendation(event)
     var url = "./" 
     fetch()
 }
+
+console.log("PRUEBITA");
