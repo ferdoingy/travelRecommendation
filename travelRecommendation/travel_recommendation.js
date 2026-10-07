@@ -4,8 +4,6 @@ const result = document.getElementById("results");
 
 searchButton.addEventListener("click", showTravelRecommendation);
 
-
-
 function showTravelRecommendation()
 {
 
@@ -89,4 +87,8 @@ function showTravelRecommendation()
 
 }
 
+function clearSearch()
+{
+    
+}
 
