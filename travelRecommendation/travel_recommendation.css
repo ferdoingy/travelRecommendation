@@ -2,16 +2,35 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
     font-family: Arial, sans-serif;
 }
 
+
+/* 
+   NAVBAR
+*/
+
 .navBar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+
+    min-height: 62px;
     padding: 12px 30px;
     background-color: #122f39;
 }
@@ -20,6 +39,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+
     color: white;
     text-decoration: none;
     font-size: 24px;
@@ -47,10 +67,16 @@ body {
     text-decoration: underline;
 }
 
+
+/* 
+   SEARCH
+*/
+
 .searchBox {
     display: flex;
     align-items: center;
     gap: 8px;
+
     padding: 6px;
     background-color: white;
     border-radius: 30px;
@@ -59,6 +85,7 @@ body {
 .searchBox input {
     width: 230px;
     min-width: 0;
+
     padding: 8px 12px;
     border: none;
     background: transparent;
@@ -72,8 +99,10 @@ body {
 
 .searchBox button {
     padding: 8px 16px;
+
     border: none;
     border-radius: 8px;
+
     background-color: #128580;
     color: white;
     cursor: pointer;
@@ -83,21 +112,21 @@ body {
     background-color: #0d6763;
 }
 
-/* Distribuye la altura entre la navegación y el contenido. */
-body {
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-}
+
+/*
+   HOME / HERO
+*/
 
 .hero {
     position: relative;
-    flex: 1;
+
     display: flex;
     align-items: center;
-    min-height: 550px;
+    gap: 50px;
+
+    min-height: calc(100svh - 62px);
     padding: 70px 8% 70px 100px;
+
     color: white;
 
     background-image:
@@ -118,6 +147,7 @@ body {
 
 .heroContent h1 {
     margin: 0 0 24px;
+
     font-size: clamp(36px, 5vw, 64px);
     font-weight: 800;
     line-height: 1.05;
@@ -126,14 +156,17 @@ body {
 .heroContent p {
     max-width: 420px;
     margin: 0 0 28px;
+
     font-size: 16px;
     line-height: 1.6;
 }
 
 .bookButton {
     padding: 12px 24px;
+
     border: none;
     border-radius: 4px;
+
     background-color: #128580;
     color: white;
     font-weight: bold;
@@ -144,12 +177,17 @@ body {
     background-color: #0d6763;
 }
 
-/* Iconos junto al borde izquierdo. */
+
+/*
+   SOCIAL LINKS
+*/
+
 .socialLinks {
     position: absolute;
     left: 25px;
     top: 50%;
     transform: translateY(-50%);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,13 +211,63 @@ body {
     color: #70ded5;
 }
 
-html {
-    scroll-behavior: smooth;
+
+/*
+   SEARCH RESULTS
+*/
+
+#result {
+    width: 360px;
+    margin-left: auto;
+    flex-shrink: 0;
 }
+
+.recommendationCard {
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background-color: white;
+    color: #222;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.recommendationCard img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+}
+
+.recommendationInfo {
+    padding: 15px;
+}
+
+.recommendationInfo h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.recommendationInfo p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+/* 
+   ABOUT US
+ */
 
 .aboutSection {
     min-height: 100vh;
     padding: 60px 7%;
+
     color: white;
 
     background-image:
@@ -200,12 +288,14 @@ html {
 
 .aboutDescription {
     padding: 20px 24px;
+
     border-radius: 6px;
     background-color: rgba(10, 30, 40, 0.65);
 }
 
 .aboutDescription p {
     margin: 0 0 12px;
+
     font-size: 16px;
     line-height: 1.6;
 }
@@ -219,11 +309,13 @@ html {
     grid-template-columns: 180px repeat(3, minmax(0, 1fr));
     align-items: start;
     gap: 24px;
+
     margin-top: 48px;
 }
 
 .team h3 {
     margin: 16px 0;
+
     font-size: 44px;
     line-height: 1.1;
 }
@@ -231,8 +323,10 @@ html {
 .teamCard {
     height: 100%;
     padding: 24px;
+
     border-radius: 8px;
     background-color: rgba(10, 30, 40, 0.75);
+
     text-align: center;
 }
 
@@ -247,52 +341,38 @@ html {
 
 .teamCard p {
     margin: 0 0 20px;
+
     font-size: 14px;
     line-height: 1.5;
 }
 
 .teamRole {
     display: inline-block;
+
     padding: 8px 18px;
     border-radius: 5px;
+
     background-color: #245779;
+
     font-size: 14px;
     font-weight: bold;
 }
 
-/* La barra permanece visible al navegar entre secciones. */
-.navBar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    min-height: 62px;
-}
 
-/* Home ocupa el espacio restante de la pantalla. */
-.hero {
-    flex: none;
-    min-height: calc(100vh - 62px);
-    min-height: calc(100svh - 62px);
-}
-
-/* Evita que la barra tape el inicio de cada sección. */
-#home,
-#aboutUs {
-    scroll-margin-top: 62px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
+/* =========================
+   CONTACT
+========================= */
 
 .contactSection {
     min-height: calc(100svh - 62px);
-    scroll-margin-top: 62px;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 60px;
+
     padding: 60px 7%;
+
     color: white;
 
     background-image:
@@ -320,10 +400,14 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
     width: 100%;
     max-width: 550px;
+
     justify-self: end;
+
     padding: 24px;
+
     border-radius: 8px;
     background-color: rgba(10, 30, 40, 0.65);
 }
@@ -331,12 +415,16 @@ html {
 .contactForm input,
 .contactForm textarea {
     width: 100%;
+
     padding: 12px;
     margin-bottom: 12px;
+
     border: 1px solid rgba(255, 255, 255, 0.65);
     border-radius: 4px;
+
     background-color: rgba(0, 0, 0, 0.15);
     color: white;
+
     font: inherit;
 }
 
@@ -357,10 +445,13 @@ html {
 
 .contactForm button {
     padding: 12px;
+
     border: none;
     border-radius: 4px;
+
     background-color: #128580;
     color: white;
+
     font: inherit;
     cursor: pointer;
 }
@@ -377,15 +468,8 @@ html {
     display: none;
 }
 
-@media (max-width: 900px) {
-    .contactSection {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 40px 24px;
-        scroll-margin-top: 0;
-    }
-
-    .contactForm {
-        max-width: none;
-    }
+#home,
+#aboutUs,
+#contactUs {
+    scroll-margin-top: 62px;
 }
