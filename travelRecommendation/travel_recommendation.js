@@ -7,3 +7,6 @@ function showTravelRecommendation(event)
 }
 
 console.log("PRUEBITA");
+console.log("PRUEBITA");
+console.log("PRUEBITA");
+console.log("PRUEBITA");
